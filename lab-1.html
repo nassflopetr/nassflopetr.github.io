@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №1</title>
+    <link href="bootstrap-5.2.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h1 class="font-monospace text-uppercase text-center fs-4">
+                    Звіт з лабораторних робіт з дисципліни "інтернет-технології та проектування WEB-застосувань"
+                </h1>
+                <p class="font-monospace text-uppercase text-center fs-5">
+                    Студент групи ЗПІ-зп21 Флорчук Назарій Петрович
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <select id="labs" class="form-select" aria-label="Default select example"></select>
+            </div>
+            <div class="col">
+                <select id="sections" class="form-select" aria-label="Default select example"></select>
+            </div>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="container font-monospace pt-4">
+        <div class="row">
+            <div class="col">
+                <section data-option-value="1" data-option-text="Опис предметного середовища">
+                    <p>Для належної роботи WEB-застосунку з продажу, необхідне виконання таких бізнес процесів:</p>
+                    <ul>
+                        <li>додавання нового продукту (адміністратором WEB-застосунку);</li>
+                        <li>редагування уже наявного продукту(адміністратором WEB-застосунку);</li>
+                        <li>видалення продукту (адміністратором WEB-застосунку);</li>
+                        <li>перегляду інформації по продуктах;</li>
+                        <li>авторизація користувача та адміністратора (з відокремленням по ролях);</li>
+                        <li>оформлення замовлення (авторизованим користувачем);</li>
+                        <li>опрацювання замовлення (адміністратором WEB-застосунку).</li>
+                    </ul>
+                    <p>
+                        Згідно бізнес вимогам, WEB-застосунок з продажу пончиків, повинен мати функціонал, який
+                        задовольняє усім, з вище описаних, бізнес процесам.
+                    </p>
+                </section>
+                <section data-option-value="2" data-option-text="Тема, мета, місце розташування WEB-застосунку та звітного HTML-документу">
+                    <p>Тема:</p>
+                    <ul>
+                        <li>
+                            Структура HTML-документу. Вибір предметної галузі. Робота з списками, посиланнями,
+                            таблицями, зображеннями та формами в HTML-документі.
+                        </li>
+                    </ul>
+                    <p>Мета:</p>
+                    <ul>
+                        <li>
+                            Набути практичні навички роботи з HTML-документом, HTML-таблицями, HTML-зображеннями,
+                            HTML-посиланнями, HTML-списками та HTML-формами. Створити шаблон звітного HTML-документом
+                            для відображення результатів роботи всіх лабораторних робіт.
+                        </li>
+                    </ul>
+                    <p>Місце розташування WEB-застосунку:</p>
+                    <ul>
+                        <li>
+                            <a href="#">Гіперпосилання.</a>
+                        </li>
+                    </ul>
+                    <p>Місце розташування звітного HTML-документу:</p>
+                    <ul>
+                        <li>
+                            <a href="#">Гіперпосилання.</a>
+                        </li>
+                    </ul>
+                </section>
+                <section data-option-value="3" data-option-text="Структура HTML-документу"
+                         data-optgroup-label="Структура">
+                    <ol>
+                        <li>
+                            <p>
+                                Будь-який HTML-документ повинен містити рядок оголошення версії HTML-документу <span
+                                    class="fw-bold">&lt;!DOCTYPE html&gt;</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Одразу за оголошенням версії документу іде кореневий тег <span class="fw-bold">&lt;html&gt;&lt;/html&gt;</span>
+                                в середині якого знаходяться усі елементи HTML-документу.
+                            </p>
+                            <ol>
+                                <li>
+                                    <p>
+                                        За допомогою <span class="fw-bold">&lt;head&gt;&lt;/head&gt;</span> містить
+                                        метадані заданого HTML-документу.
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            <p>
+                                                За допомогою <span class="fw-bold">&lt;title&gt;&lt;/title&gt;</span>
+                                                задається назва HTML-документу, яка у подальшому відображається у
+                                                заголовку вкладки браузера.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>
+                                        Тег <span class="fw-bold">&lt;body&gt;&lt;/body&gt;</span> визначає тіло HTML
+                                        документа,
+                                        та є контейнером для всього видимого вмісту, такого як заголовки, абзаци,
+                                        зображення,
+                                        гіперпосилання, таблиці, списки тощо.
+                                    </p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <p class="pt-3">HTML-код з проекту WEB-застосунку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/11.png" alt="...">
+                    </div>
+                    <p class="pt-3">Відображення HTML-документу в проекті WEB-застосунку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/12.png" alt="...">
+                    </div>
+                </section>
+                <section data-option-value="4" data-option-text="Структура HTML-таблиці"
+                         data-optgroup-label="Структура">
+                    <p>У Web-застосунку не використовується елемент HTML-таблиці.</p>
+                </section>
+                <section data-option-value="5" data-option-text="Структура HTML-зображення"
+                         data-optgroup-label="Структура">
+                    <p>
+                        Тег <span class="fw-bold">&lt;img&gt;</span> використовується для додавання зображення в HTML
+                        документ. На прикладі Web-застосунку, HTML-тег <span class="fw-bold">&lt;img&gt;</span>,
+                        використовується, щоб додати зображення у картку товару.
+                    </p>
+                    <p class="pt-3">Тег <span class="fw-bold">&lt;img&gt;</span> має 2 обов'язкові атрибути:</p>
+                    <ul>
+                        <li>
+                            <span class="fw-bold">src</span> - атрибут в якому вказується шлях до зображення, яке
+                            необхідно завантажити на сторінку. Шлях може бути як абсолютний, так і відносний;
+                        </li>
+                        <li>
+                            <span class="fw-bold">alt</span> - атрибут в якому вказується повідомлення, яке буде
+                            показано користувачу, якщо зображення не було завантаженно на сторінку (наприклад в <span
+                                class="fw-bold">src</span> атрибут було невірно задано шлях до зображення).
+                        </li>
+                    </ul>
+                    <p>Для стилізації зображення можна використовувати <span class="fw-bold">CSS</span> стилі. У випадку
+                        WEB-застосунку для стилізації зображення картки товару, у тег <span
+                                class="fw-bold">&lt;img&gt;</span> було добавлено атрибут <span
+                                class="fw-bold">class</span> із значенням <span class="fw-bold">card-img-top</span> з
+                        бібліотеки <span class="fw-bold">bootstrap</span>.</p>
+                    <p class="pt-3">HTML-код з проекту WEB-застосунку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/1.png" alt="...">
+                    </div>
+                    <p class="pt-3">Відображення зображення в проекті WEB-застосунку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/2.png" alt="...">
+                    </div>
+                </section>
+                <section data-option-value="6" data-option-text="Структура HTML-списку" data-optgroup-label="Структура">
+                    <p>
+                        Тег <span class="fw-bold">&lt;ul&gt;&lt;/ul&gt;</span> використовується для додавання <span
+                            class="fw-bold">непронумерованого</span> списку в HTML-документ. Для додавання <span
+                            class="fw-bold">пронумерованого</span> списку використовується HTML-тег <span
+                            class="fw-bold">&lt;ol&gt;&lt;/ol&gt;</span>. Для того щоб добавити рядок в список (<span
+                            class="fw-bold">непронумерований</span>, або <span class="fw-bold">пронумерований</span>),
+                        необхідно добавити тег <span class="fw-bold">&lt;li&gt;&lt;/li&gt;</span>, як значення тегу
+                        <span class="fw-bold">&lt;ul&gt;&lt;/ul&gt;</span>, або <span class="fw-bold">&lt;ol&gt;&lt;/ol&gt;</span>.
+                    </p>
+                    <p class="pt-3">Приклад HTML-коду <span class="fw-bold">пронумерованого</span> списку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/8.png" alt="...">
+                    </div>
+                    <p class="pt-3">Відображення <span class="fw-bold">пронумерованого</span> списку:</p>
+                    <ol>
+                        <li>Рядок.</li>
+                        <li>Ще один рядок.</li>
+                        <li>І останній рядок.</li>
+                    </ol>
+                    <p class="pt-3">Приклад HTML-коду <span class="fw-bold">непронумерованого</span> списку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/9.png" alt="...">
+                    </div>
+                    <p class="pt-3">Відображення <span class="fw-bold">непронумерованого</span> списку:</p>
+                    <ul>
+                        <li>Рядок.</li>
+                        <li>Ще один рядок.</li>
+                        <li>І останній рядок.</li>
+                    </ul>
+                    <p class="pt-3">Приклад HTML-коду <span class="fw-bold">вкладеного</span> списку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/10.png" alt="...">
+                    </div>
+                    <p class="pt-3">Відображення <span class="fw-bold">вкладеного</span> списку:</p>
+                    <ol>
+                        <li>
+                            Рядок.
+                            <ul>
+                                <li>Вкладений рядок.</li>
+                                <li>Ще один вкладений рядок.</li>
+                                <li>І останній вкладений рядок.</li>
+                            </ul>
+                        </li>
+                        <li>Ще один рядок.</li>
+                        <li>І останній рядок.</li>
+                    </ol>
+                    <p class="pt-3">На прикладі Web-застосунку, використовується <span class="fw-bold">непронумерований</span>
+                        список, для реалізації навігаці по WEB-застосунку.</p>
+                    <p>HTML-код з проекту WEB-застосунку:</p>
+                    <div class="text-center">
+                        <img class="img-fluid pb-3" src="images/6.png" alt="...">
+                    </div>
+                    <p class="pt-3">Відображення навігації WEB-застосунку із застосуванням HTML-списку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/7.png" alt="...">
+                    </div>
+                </section>
+                <section data-option-value="7" data-option-text="Структура HTML-посилання"
+                         data-optgroup-label="Структура">
+                    <p>
+                        Тег <span class="fw-bold">&lt;a&gt;&lt;/a&gt;</span> використовується для створення
+                        гіперпосилання, в HTML-документі, для переходу з однієї сторінки WEB-застосунку на іншу. На
+                        прикладі Web-застосунку, HTML-тег <span class="fw-bold">&lt;a&gt;&lt;/a&gt;</span>,
+                        використовується для перемикання діалогових вікон автентифікації та реєстрації користувача.
+                    </p>
+                    <p class="pt-3">Тег <span class="fw-bold">&lt;a&gt;&lt;/a&gt;</span> має 1 обов'язковий атрибут:</p>
+                    <ul>
+                        <li>
+                            <span class="fw-bold">href</span> - атрибут в якому вказується шлях на який повинен
+                            виконатись перехід, у разі натиснення користувачем на задане гіперпосилання. Шлях може бути
+                            як абсолютний, так і відносний.
+                        </li>
+                    </ul>
+                    <p class="pt-3">У випадку WEB-застосунку, у тег <span class="fw-bold">&lt;a&gt;&lt;/a&gt;</span> було добавлено
+                        атрибут <span class="fw-bold">id</span>, який використовується в <span class="fw-bold">JS</span>
+                        коді для зміни базової логіки роботи елементу. Атрибут <span class="fw-bold">href</span> із
+                        значенням <span class="fw-bold">"#"</span> (так, як у посиланні немає необхідності, тому що
+                        логіка роботи елементу буде описана в <span class="fw-bold">JS</span> коді), та значення тега
+                        <span class="fw-bold">&lt;a&gt;&lt;/a&gt;</span> у вигляті текстового повідомлення "Я не
+                        зареєстрований!".</p>
+                    <p class="pt-3">HTML-код з проекту WEB-застосунку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/3.png" alt="...">
+                    </div>
+                    <p class="pt-3">Відображення гіперпосилання в проекті WEB-застосунку:</p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/4.png" alt="...">
+                    </div>
+                </section>
+                <section data-option-value="8" data-option-text="Висновок">
+                    <ol>
+                        <li>
+                            <p>
+                                <span class="fw-bold">HTML</span> (англ. HyperText Markup Language — мова розмітки
+                                гіпертексту) — стандартизована мова розмітки документів для перегляду веб-сторінок у
+                                браузері.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="fw-bold">CSS</span> (англ. Cascading Style Sheets — каскадні таблиці
+                                стилів) - мова, що використовується для стилевого оформлення HTML (і не тільки)
+                                сторінок.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="fw-bold">JavaScript (JS)</span> це динамічна, об'єктно-орієнтована
+                                прототипна мова програмування. Найчастіше використовується для створення сценаріїв
+                                веб-сторінок, що надає можливість на стороні клієнта (пристрої кінцевого користувача)
+                                взаємодіяти з користувачем, керувати браузером, асинхронно обмінюватися даними з
+                                сервером, змінювати структуру та зовнішній вигляд HTML-документу.
+                            </p>
+                        </li>
+                    </ol>
+                    <p class="pt-3">
+                        <span class="fw-bold">HTML</span> разом із <span class="fw-bold">CSS</span> - разом утворюють
+                        основу дизайну сучасних WEB-застосунків. А <span class="fw-bold">JS</span>, дає можливість
+                        WEB-застосункам бути інтерактивними.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="js/app.js" rel="script"></script>
+</body>
+</html>

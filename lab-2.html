@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №2</title>
+    <link href="bootstrap-5.2.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h1 class="font-monospace text-uppercase text-center fs-4">
+                    Звіт з лабораторних робіт з дисципліни "інтернет-технології та проектування WEB-застосувань"
+                </h1>
+                <p class="font-monospace text-uppercase text-center fs-5">
+                    Студент групи ЗПІ-зп21 Флорчук Назарій Петрович
+                </p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <select id="labs" class="form-select" aria-label="Default select example"></select>
+            </div>
+            <div class="col">
+                <select id="sections" class="form-select" aria-label="Default select example"></select>
+            </div>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="container font-monospace pt-4">
+        <div class="row">
+            <div class="col">
+                <section data-option-value="1" data-option-text="Постановка задачі">
+                    <p>Тема:</p>
+                    <ul>
+                        <li>
+                            Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових елементів
+                            в HTML-документах.
+                        </li>
+                    </ul>
+                    <p>Мета:</p>
+                    <ul>
+                        <li>
+                            Набути практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними
+                            властивостями кольору та фону, зовнішніми та внутрішніми відступами, плаваючими елементами,
+                            оформленням текстових елементів.
+                        </li>
+                    </ul>
+                </section>
+                <section data-option-value="2" data-option-text="Списки">
+                    <p>
+                        В <a href="lab-1.html">попередній лабораторній роботі</a> згадувалося, що у HTML-документу є 2
+                        види списків: <span class="fw-bold">&lt;ul&gt;&lt;/ul&gt;</span> використовується для додавання
+                        <span class="fw-bold">непронумерованого</span> списку в HTML-документ, а для додавання
+                        <span class="fw-bold">пронумерованого</span> списку використовується HTML-тег
+                        <span class="fw-bold">&lt;ol&gt;&lt;/ol&gt;</span>.
+                    </p>
+                    <p class="pt-3">До основних <span class="fw-bold">CSS</span> стилів списків належать
+                        <span class="fw-bold">list-style-type</span>, <span class="fw-bold">list-style-image</span>,
+                        <span class="fw-bold">list-style-position</span> та <span class="fw-bold">list-style</span>.
+                        Приклад:</p>
+                    <ul>
+                        <li>
+                            <p>
+                                <span class="fw-bold">list-style-type</span> - визначає тип маркеру (можливі значення:
+                                <span class="fw-bold">circle</span>, <span class="fw-bold">square</span> і багато
+                                інших).
+                            </p>
+                            <p>
+                                Приклад HTML-коду із заданим <span class="fw-bold">inline</span> стилем списку (за
+                                допомогою атрибуту <span class="fw-bold">style</span>):
+                            </p>
+                            <div class="text-start">
+                                <img class="img-fluid pb-3" src="images/13.png" alt="...">
+                            </div>
+                            <p>
+                                Приклад HTML-коду, із заданим стилем списку, за допомогою тега
+                                <span class="fw-bold">&lt;style&gt;&lt;/style&gt;</span> в
+                                <span class="fw-bold">&lt;head&gt;&lt;/head&gt;</span> HTML-документу:
+                            </p>
+                            <div class="text-start">
+                                <img class="img-fluid pb-3" src="images/14.png" alt="...">
+                            </div>
+                            <p>
+                                Приклад HTML-коду, із заданим стилем списку, за допомогою зовнішнього файлу стилів,
+                                який добавлений за допомогою тега <span class="fw-bold">&lt;link&gt;</span> в
+                                <span class="fw-bold">&lt;head&gt;&lt;/head&gt;</span> HTML-документу:
+                            </p>
+                            <div class="text-start">
+                                <img class="img-fluid pb-3" src="images/15.png" alt="...">
+                            </div>
+                            <p>
+                                Результат відображення списку HTML-документу, у всіх 3-х способах задання
+                                <span class="fw-bold">CSS</span> стилю, буде одинаковий:
+                            </p>
+                            <ol style="list-style-type: circle;">
+                                <li>Рядок.</li>
+                                <li>Ще один рядок.</li>
+                                <li>І останній рядок.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </section>
+                <section data-option-value="3" data-option-text="Ідентифікатори">
+                    <p>
+                        Є інколи необхідність отримати елемент (унікальний) (для того, щоб прописати йому
+                        <span class="fw-bold">CSS</span> стилі, або щоб отримати його в <span class="fw-bold">JS</span>
+                        для подальших маніпуляцій), але не за допомогою значення атрибуту
+                        <span class="fw-bold">class</span> елемента, або не за типом тега HTML-документу, тоді
+                        застосовується атрибут HTML-документу <span class="fw-bold">id</span>. Значення цього атрибуту,
+                        повинно бути унікальним в HTML-документі (інакше прив'язка
+                        <span class="fw-bold">CSS</span> стилів, або робота з таким елементом в
+                        <span class="fw-bold">JS</span> коді може бути непередбачуваною).
+                    </p>
+                    <p class="pt-3">
+                        Приклад HTML-коду, із заданим стилем HTML-списку, за допомогою тега
+                        <span class="fw-bold">&lt;style&gt;&lt;/style&gt;</span> в
+                        <span class="fw-bold">&lt;head&gt;&lt;/head&gt;</span> HTML-документу, з використанням у
+                        якості селектора елементу його ідентифікатора:
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/16.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Результат відображення списку HTML-документу, із заданим стилем, з використанням у якості
+                        селектора елементу - його ідентифікатора:
+                    </p>
+                    <ul style="list-style-type: square;">
+                        <li>Рядок.</li>
+                        <li>Ще один рядок.</li>
+                        <li>І останній рядок.</li>
+                    </ul>
+                </section>
+                <section data-option-value="4" data-option-text="Відступи">
+                    <p>Є 2 види відступів в HTML-документах:</p>
+                    <ol>
+                        <li>
+                            <span class="fw-bold">margin</span> - властивість стилю <span class="fw-bold">CSS</span>,
+                            яка відповідає за задання зовнішнього відступу <span class="fw-bold">навколо</span>
+                            елемента HTML-документу, якому прописаний даний стиль.
+                            <p>
+                                Також можуть бути використані такі властивості стилю <span class="fw-bold">CSS</span>,
+                                якщо необхідно встановити зовнішній відступ із заданої сторони HTML-елементу:
+                            </p>
+                            <ul>
+                                <li>
+                                    <span class="fw-bold">margin-top</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання зовнішнього відступу
+                                    <span class="fw-bold">вгорі</span> елемента HTML-документу, якому прописаний даний
+                                    стиль;
+                                </li>
+                                <li>
+                                    <span class="fw-bold">margin-bottom</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання зовнішнього відступу
+                                    <span class="fw-bold">внизу</span> елемента HTML-документу, якому прописаний даний
+                                    стиль;
+                                </li>
+                                <li>
+                                    <span class="fw-bold">margin-left</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання зовнішнього відступу
+                                    <span class="fw-bold">по ліву сторону</span> елемента HTML-документу,
+                                    якому прописаний даний стиль;
+                                </li>
+                                <li>
+                                    <span class="fw-bold">margin-right</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання зовнішнього відступу
+                                    <span class="fw-bold">по праву сторону</span> елемента HTML-документу,
+                                    якому прописаний даний стиль.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="fw-bold">padding</span> - властивість стилю <span class="fw-bold">CSS</span>,
+                            яка відповідає за задання внутрішнього відступу в середині елемента HTML-документу, якому
+                            прописаний даний стиль.
+                            <p>
+                                Також можуть бути використані такі властивості стилю <span class="fw-bold">CSS</span>,
+                                якщо необхідно встановити внутрішнього відступ із заданої сторони HTML-елементу:
+                            </p>
+                            <ul>
+                                <li>
+                                    <span class="fw-bold">padding-top</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання внутрішнього відступу
+                                    <span class="fw-bold">вгорі</span> елемента HTML-документу, якому прописаний даний
+                                    стиль;
+                                </li>
+                                <li>
+                                    <span class="fw-bold">padding-bottom</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання внутрішнього відступу
+                                    <span class="fw-bold">внизу</span> елемента HTML-документу, якому прописаний даний
+                                    стиль;
+                                </li>
+                                <li>
+                                    <span class="fw-bold">padding-left</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання внутрішнього відступу
+                                    <span class="fw-bold">по ліву сторону</span> елемента HTML-документу,
+                                    якому прописаний даний стиль;
+                                </li>
+                                <li>
+                                    <span class="fw-bold">padding-right</span> - властивість стилю
+                                    <span class="fw-bold">CSS</span>, яка відповідає за задання внутрішнього відступу
+                                    <span class="fw-bold">по праву сторону</span> елемента HTML-документу,
+                                    якому прописаний даний стиль.
+                                </li>
+                            </ul>
+                        </li>
+                        </li>
+                    </ol>
+                </section>
+                <section data-option-value="5" data-option-text="Селектори HTML-тегу і класу"
+                         data-optgroup-label="Селектори">
+                    <p>
+                        Використання <span class="fw-bold">inline</span> стилів є не зручним, так як часто є
+                        необхідність задати певний набір стилів одразу кільком елементам, а при використанні у цій
+                        ситуації <span class="fw-bold">inline</span> стилів, значно збільшується об'єм написаного коду,
+                        це ускладнює подальшу його підтримку іншими розробниками.
+                    </p>
+                    <p>
+                        У цій ситуації використовується встановлення стилів HTML-елементам за допомогою селекторів.
+                    </p>
+                    <p class="pt-3">
+                        Приклад задання стилю елементу в WEB-застосунку, із застосуванням
+                        <span class="fw-bold">селектора тегу</span> (HTML-елементу):
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/17.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Приклад задання стилю елементу в WEB-застосунку, із застосуванням
+                        <span class="fw-bold">селектора класу</span> (HTML-елементу):
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/18.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Для кнопки, в проекті WEB-застосунку, в формі картки товару, використовується призначення стилю
+                        за допомогою <span class="fw-bold">селектора класу</span>:
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/2.png" alt="...">
+                    </div>
+                </section>
+                <section data-option-value="6" data-option-text="Інші селектори"
+                         data-optgroup-label="Селектори">
+                    <p>
+                        На прикладі картки товару WEB-застосунку, розглянемо і інші способи задання
+                        <span class="fw-bold">CSS</span> стилів тегу
+                        <span class="fw-bold">&lt;button&gt;&lt;/button&gt;</span> HTML-документу.
+                    </p>
+                    <p class="pt-3">
+                        Приклад задання стилю, із застосуванням
+                        <span class="fw-bold">ідентифікатора, в якості селектора</span> HTML-елементу:
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/19.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Приклад задання стилю елементу в WEB-застосунку, із застосуванням селектора тегу
+                        (HTML-елементу). Присвоєння стилів для тегів <span class="fw-bold">&lt;i&gt;&lt;/i&gt;</span>
+                        та <span class="fw-bold">&lt;span&gt;&lt;/span&gt;</span>, що знаходяться в середині тега
+                        <span class="fw-bold">&lt;button&gt;&lt;/button&gt;</span>, відбувається як для його
+                        безпосередніх <span class="fw-bold">дочірніх елементів першого рівня</span>:
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/17.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Для кнопки, в проекті WEB-застосунку, в формі картки товару, при використані в якості селектора
+                        <span class="fw-bold">ідентифікатора елемента</span>, або присвоєні стилів для
+                        <span class="fw-bold">дочірніх елементів</span> кнопки, кнопка має такий вигляд:
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/2.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Існує велика кількість практик побудови селекторних виразів для отримання елементів
+                        HTML-документу. До них належать <span class="fw-bold">селектори за атрибутом тега</span>,
+                        <span class="fw-bold">за атрибутом і його значенням</span>,
+                        <span class="fw-bold">селектори дочірніх елементів</span> та багато інших.
+                    </p>
+                </section>
+                <section data-option-value="7" data-option-text="Групування селекторів"
+                         data-optgroup-label="Селектори">
+                    <p>
+                        Групування селекторів <span class="fw-bold">CSS</span> стилів, використовується коли є
+                        необхідність присвоїти спільну <span class="fw-bold">CSS</span> властивість, групі елементів
+                        HTML-документу.
+                    </p>
+                    <p class="pt-3">
+                        У WEB-застосуноку використовується бібліотека стилів <span class="fw-bold">bootstrap</span>.
+                        Дизайнером WEB-застосунку було прийнято рішення, у деяких елементах діалогових вікон
+                        (не у всіх), прибрати, стандартно визначену у бібліотеці стилів
+                        <span class="fw-bold">bootstrap</span>, властивість <span class="fw-bold">border-bottom</span>
+                        (рамку в нижній частині заголовка діалогового вікна).
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/22.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Було використано групування селекторів діалогових вікон (у якості селекторів виступають їх
+                        ідентифікатори), для вирішення цього завдання.
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/20.png" alt="...">
+                    </div>
+                    <p class="pt-3">
+                        Результат:
+                    </p>
+                    <div class="text-start">
+                        <img class="img-fluid pb-3" src="images/21.png" alt="...">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="js/app.js" rel="script"></script>
+</body>
+</html>
