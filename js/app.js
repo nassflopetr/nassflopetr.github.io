@@ -1,11 +1,9 @@
 window.addEventListener('load', function () {
-    const labsElement = document.getElementById('labs'),
-        sectionsElement = document.getElementById('sections'),
-        sectionsNodeList = document.querySelectorAll('main section[data-option-value][data-option-text]'),
-        labs = [
+    const labs = [
             {'value': 'lab-1.html', 'text': 'Лабораторна робота №1'},
             {'value': 'lab-2.html', 'text': 'Лабораторна робота №2'}
         ],
+        sectionsNodeList = document.querySelectorAll('main section[data-option-value][data-option-text]'),
         sections = (function () {
             let result = [];
 
@@ -25,6 +23,77 @@ window.addEventListener('load', function () {
             return result;
         })(),
         currentLabValue = window.location.pathname.split('/').slice(-1)[0];
+
+    /**
+     * Build document header
+     */
+    (function () {
+        const header = document.createElement('header'),
+            container = document.createElement('div'),
+            row = document.createElement('div'),
+            col = document.createElement('div'),
+            h1 = document.createElement('h1'),
+            p = document.createElement('p');
+
+        container.classList.add('container-md', 'pt-3');
+        row.classList.add('row');
+        col.classList.add('col-lg-8', 'col-md-10', 'col-sm-12', 'col-12', 'offset-lg-2', 'offset-md-1', 'offset-sm-0');
+        h1.classList.add('font-monospace', 'text-uppercase', 'text-center', 'fs-4');
+        p.classList.add('font-monospace', 'text-uppercase', 'text-center', 'fs-5');
+
+        h1.appendChild(
+            document.createTextNode(
+                'Звіт з лабораторних робіт з дисципліни "інтернет-технології та проектування WEB-застосувань"'
+            )
+        );
+
+        p.appendChild(document.createTextNode('Студент групи ЗПІ-зп21 Флорчук Назарій Петрович'));
+
+        col.appendChild(h1);
+        col.appendChild(p);
+        row.appendChild(col);
+        container.appendChild(row);
+        header.appendChild(container);
+
+        document.querySelector('body').prepend(header);
+    })();
+
+    /**
+     * Build document navigation
+     */
+    (function () {
+        const nav = document.createElement('nav'),
+            container = document.createElement('div'),
+            row = document.createElement('row'),
+            getColElement = function (id, label) {
+                const col = document.createElement('div'),
+                    select = document.createElement('select');
+
+                col.classList.add('col-md-6', 'col-12', 'pt-3');
+                select.classList.add('form-select');
+
+                select.setAttribute('id', id);
+                select.setAttribute('aria-label', label);
+
+                col.appendChild(select);
+
+                return col;
+            };
+
+        container.classList.add('container-md');
+        row.classList.add('row');
+
+        row.appendChild(getColElement('labs', 'List of laboratory works'));
+        row.appendChild(getColElement('sections', 'Sections of laboratory work'));
+
+        container.appendChild(row);
+        nav.appendChild(container);
+
+        document.querySelector('header').after(nav);
+    })();
+
+    const labsElement = document.getElementById('labs'),
+        sectionsElement = document.getElementById('sections');
 
     /**
      * Populating labs select tag with options
